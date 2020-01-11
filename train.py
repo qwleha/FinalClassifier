@@ -106,6 +106,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 model.fit(X_train, y_train, epochs=10)
-test_loss, test_acc = model.evaluate(X_test, y_test, verbose=2)
-print('Accuracy', test_acc)
+y_pred = model.predict_classes(X_test)
+acc = accuracy_score(y_pred, y_test)
+print("Accuracy", acc)
 model.save('model.h5')
