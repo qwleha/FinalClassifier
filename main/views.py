@@ -1,29 +1,28 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-import pandas as pd
-import os
+from collections import Counter
 
-from tensorflow.keras.models import load_model
 
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.svm import SVC
+from scipy.sparse import csr_matrix
+
+from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.preprocessing import MinMaxScaler
+
+from scipy.sparse import hstack
 
 import pandas as pd
 import numpy as np
 
+from tensorflow.keras.models import load_model
+
 from .models import Article
 
-from scipy.sparse import csr_matrix
-from scipy.sparse import hstack
-
-from collections import Counter
-
+import pandas as pd
+import os
 import pickle
 import sys
 import re
