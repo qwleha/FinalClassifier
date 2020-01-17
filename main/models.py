@@ -4,7 +4,7 @@ from django.db import models
 
 class Article(models.Model):
     href = models.CharField(max_length=256)
-    title = models.CharField(max_length=126, default='')
+    title = models.TextField()
     text = models.TextField()
     type = models.CharField(max_length=32, default='')
 
