@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'classifier.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.ostgresql_psycorpg2',
+        'ENGINE': 'django.db.backends.postgresql_psycorpg2',
         'NAME': 'articles',
 		'USER': 'articles_admin',
 		'PASSWORD': 'mypass',
